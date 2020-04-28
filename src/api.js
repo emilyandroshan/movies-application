@@ -2,20 +2,21 @@ module.exports = {
   getMovies: () => {
     return fetch('api/movies')
       .then(response => response.json());
-  }
-};
+  },
+
   postMovies: () => {
     const options = {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
-        },
-      body: JSON.stringify(db.json)
-      };
+      },
+      body: JSON.stringify(newMovieAdded)
+    };
     fetch('api/movies', options)
         .then(response => response.json())
-        .then()
-  };
+  }
+};
+
 
 
 //
