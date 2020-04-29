@@ -1,7 +1,7 @@
 module.exports = {
   getMovies: () => {
     return fetch('api/movies')
-      .then(response => response.json());
+        .then(response => response.json());
   },
 
   postMovies: () => {
@@ -10,7 +10,7 @@ module.exports = {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newMovieAdded)
+      body: JSON.stringify(movie)
     };
     fetch('api/movies', options)
         .then(response => response.json())

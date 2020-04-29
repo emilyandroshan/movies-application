@@ -10,15 +10,29 @@ sayHello('World');
 // const {getMovies} = require('./api.js');
 import {getMovies, postMovies} from './api.js';
 
+
 getMovies().then((movies) => {
+
+  document.getElementById('load-screen').style.display = "none";
+
   console.log('Here are all the movies:');
+  let output = '<h2>Movie Posts</h2>';
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
+    output += `<ul>
+               <li>id: ${id}</li>
+               <li>title: ${title}</li>
+               <li>rating: ${rating}</li>
+               </ul>`;
   });
+  document.getElementById('output').innerHTML = output;
 }).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.')
+  alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
+
+
+// document.getElementById('getMovieList').addEventListener('click', getMovies);
 
 //work in progress of POST
 // postMovies().then((movies) => {
@@ -31,12 +45,12 @@ getMovies().then((movies) => {
 //   console.log(error);
 // });
 
-const movieTitle = document.querySelector('#movie-title');
-const movieRating = document.querySelector('#movie-rating');
-const submitButton = document.querySelector('#submitButton');
+// const movieTitle = document.querySelector('#movie-title');
+// const movieRating = document.querySelector('#movie-rating');
+// const submitButton = document.querySelector('#submitButton');
 
 //adds DOM event when clicking on the submit button
-submitButton.addEventListener('click', keyCoffee);
+// submitButton.addEventListener('click', keyCoffee);
 //
 
 

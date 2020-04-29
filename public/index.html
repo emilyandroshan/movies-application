@@ -3,46 +3,42 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
 
-    <div class="container">
-        <h1>Hello There!</h1>
-        <p>To get started, edit <code>src/index.js</code>.</p>
-    </div>
+<div id="load-screen">
+    <div id="loading">loading</div>
+</div>
 
-    <form>
-        <div class="form-group row">
-            <label for="movie-title" class="">Add a movie</label>
-            <div class="col-sm-10">
-                <input id="movie-title" class="form-control" type="text" placeholder="Movie title">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="movie-rating">Movie rating</label>
-            <select class="form-control" id="movie-rating">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group row">
-            <div class="col-sm-10">
-                <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </form>
+
+<div class="container">
+    <h1>Howdy! Welcome to Movie Info App</h1>
+    <p>To get started, check out the current movie listing</p>
+    <div id="output"></div>
+</div>
+
+
+<div class="container">
+<form>
+    <label for="movie-title">Name of movie</label>
+    <input type="text" id="movie-title" placeholder="Movie Title">
+    <label for="movie-rating">Rating of Movie</label>
+    <input type="text" id="movie-rating" placeholder="Movie Rating">
+    <button type="submit" id="submit">Submit</button>
+</form>
+</div>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+<script src="./main.js"></script>
+
+
 
 
 </body>
