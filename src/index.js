@@ -32,10 +32,13 @@ getMovies().then((movies) => {
 });
 
 
-// document.getElementById('getMovieList').addEventListener('click', getMovies);
 
 //work in progress of POST
-// postMovies().then((movies) => {
+postMovies({
+  title: "Star Wars",
+  rating: 1
+}).then((movies) => {
+  console.log(movies);
 //   console.log('Here is the new movie the user added:');
 //   movies.forEach(({title, rating, id}) => {
 //     console.log(`id#${id} - ${title} - rating: ${rating}`);
@@ -43,16 +46,26 @@ getMovies().then((movies) => {
 // }).catch((error) => {
 //   alert('Oh no! Something went wrong.\nCheck the console for details.')
 //   console.log(error);
-// });
+});
+
+
+// var submitButton = document.querySelector('#submit');
+// submitButton.addEventListener('click', addAMovie);
+//
+// function addAMovie(){
+//   var newMovie = {
+//     id: movies.length + 1,
+//     title: document.getElementById('movie-title').value,
+//     rating: document.getElementById('movie-rating').value
+//   };
+//   console.log(movies);
+
+
+
 
 // const movieTitle = document.querySelector('#movie-title');
 // const movieRating = document.querySelector('#movie-rating');
 // const submitButton = document.querySelector('#submitButton');
-
-//adds DOM event when clicking on the submit button
-// submitButton.addEventListener('click', keyCoffee);
-//
-
 
 //render html of movies not coffee
 // function keyCoffee() {
