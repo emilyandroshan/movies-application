@@ -24,10 +24,11 @@ getMovies().then((movies) => {
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     output += `<ul>
-               <li>id: ${id} <button id="deleteMovie_${id}">Delete Movie</button></li>
+               <li>id: ${id}</li>
                <li>title: ${title}</li>
                <li>rating: ${rating}</li>
                </ul>
+               <button data-movieid="${id}" class="delete">Delete Movie</button>
                 `;
   });
   document.getElementById('output').innerHTML = output;
@@ -48,6 +49,43 @@ document.getElementById('submit').addEventListener('click', function () {
   })
 });
 
+
+
+$(document).on("click", ".delete", function () {
+  console.log('delete button was clicked');
+  let movieID = $(this).data("movieid");
+  const url = 'api/movies/' + parseInt(movieID);
+  const options = {
+        method: 'DELETE',
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      fetch(url, options)
+          .then(response => response.json())
+
+          ///whole getMovies function sequence from above
+          .then(getMovies().then((movies) => {
+            document.getElementById('load-screen').style.display = "none";
+            console.log('Here are all the movies:');
+            let output = '<h2>Movie Posts</h2>';
+            movies.forEach(({title, rating, id}) => {
+              console.log(`id#${id} - ${title} - rating: ${rating}`);
+              output += `<ul>
+               <li>id: ${id}</li>
+               <li>title: ${title}</li>
+               <li>rating: ${rating}</li>
+               </ul>
+               <button data-movieid="${id}" class="delete">Delete Movie</button>
+                `;
+            });
+            document.getElementById('output').innerHTML = output;
+          }).catch((error) => {
+            alert('Oh no! Something went wrong.\nCheck the console for details.');
+            console.log(error);
+          }));
+        //this concludes the getMovies function sequence from above
+    });
 
 
 

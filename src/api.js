@@ -16,19 +16,28 @@ module.exports = {
         .then(response => response.json())
   },
 
-  deleteMovies: (movie, id) => {
-    const options = {
-      method: 'DELETE',
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(movie)
-    };
-    fetch(`api/movies/${id}`, options)
-        .then(response => response.json())
-  }
+  // deleteMovies: (movie, id) => {
+  //   const options = {
+  //     method: 'DELETE',
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   };
+  //   //removed $ sign in front of id
+  //   fetch(`api/movies/{id}`, options)
+  //       .then(response => response.json())
+  // }
 
 };
+
+
+//   const options = {
+//     method: 'DELETE',
+//     headers: {'Content-Type': 'application/json'}
+//   };
+//   fetch(url, options)
+//       .then(updatemovies)
+// });
 
 
 
