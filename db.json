@@ -14,6 +14,16 @@
       "title": "Harry Potter",
       "rating": "3",
       "id": 3
+    },
+    {
+      "title": "Wizard of Oz",
+      "rating": "5",
+      "id": 4
+    },
+    {
+      "title": "Blackhawk Down",
+      "rating": "3",
+      "id": 5
     }
   ]
 }

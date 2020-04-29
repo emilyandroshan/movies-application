@@ -1,6 +1,10 @@
 /**
  * es6 modules and imports
  */
+
+//Calling jQuery
+const $ = require('jquery');
+
 import sayHello from './hello';
 sayHello('World');
 
@@ -8,7 +12,7 @@ sayHello('World');
  * require style imports
  */
 // const {getMovies} = require('./api.js');
-import {getMovies, postMovies} from './api.js';
+import {getMovies, postMovies, deleteMovies} from './api.js';
 
 
 getMovies().then((movies) => {
@@ -20,10 +24,11 @@ getMovies().then((movies) => {
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     output += `<ul>
-               <li>id: ${id}</li>
+               <li>id: ${id} <button id="deleteMovie_${id}">Delete Movie</button></li>
                <li>title: ${title}</li>
                <li>rating: ${rating}</li>
-               </ul>`;
+               </ul>
+                `;
   });
   document.getElementById('output').innerHTML = output;
 }).catch((error) => {
@@ -31,12 +36,8 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-
-
-
 // var submitButton = document.getElementById('submit');
 // document.getElementById('submit').addEventListener('click', console.log('hellooooo'));
-
 
 document.getElementById('submit').addEventListener('click', function () {
   postMovies({
@@ -46,6 +47,31 @@ document.getElementById('submit').addEventListener('click', function () {
     console.log(movies);
   })
 });
+
+
+
+
+// jQuery
+// $(document).on("click",".trash",function () {
+//   let movie_id = $(this).attr("id");
+//   const url = '/api/movies/' + movie_id;
+//   const options = {
+//     method: 'DELETE',
+//     headers: {'Content-Type': 'application/json'}
+//   };
+//   fetch(url, options)
+//       .then(updatemovies)
+// });
+
+
+// document.getElementById('deleteMovie_${id}').addEventListener('click', console.log('delete is working'));
+
+// document.getElementById('deleteMovie_${id}').addEventListener('click', function () {
+//   deleteMovies({
+//   }).then((movies) => {
+//     console.log(movies);
+//   })
+// });
 
 
 

@@ -4,18 +4,33 @@ module.exports = {
         .then(response => response.json());
   },
 
-  postMovies: (newMovie) => {
+  postMovies: (movie) => {
     const options = {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(newMovie)
+      body: JSON.stringify(movie)
     };
     fetch('api/movies', options)
         .then(response => response.json())
+  },
+
+  deleteMovies: (movie, id) => {
+    const options = {
+      method: 'DELETE',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(movie)
+    };
+    fetch(`api/movies/${id}`, options)
+        .then(response => response.json())
   }
+
 };
+
+
 
 
 
