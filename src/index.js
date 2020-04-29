@@ -34,8 +34,7 @@ getMovies().then((movies) => {
 
 
 
-var submitButton = document.getElementById('submit');
-
+// var submitButton = document.getElementById('submit');
 // document.getElementById('submit').addEventListener('click', console.log('hellooooo'));
 
 
@@ -49,53 +48,7 @@ document.getElementById('submit').addEventListener('click', function () {
 });
 
 
-//work in progress of POST
-
-// postMovies({
-//   title: document.getElementById('movie-title').value,
-//     rating: document.getElementById('movie-rating').value
-// }).then((movies) => {
-//   console.log(movies);
-// //   console.log('Here is the new movie the user added:');
-// //   movies.forEach(({title, rating, id}) => {
-// //     console.log(`id#${id} - ${title} - rating: ${rating}`);
-// //   });
-// // }).catch((error) => {
-// //   alert('Oh no! Something went wrong.\nCheck the console for details.')
-// //   console.log(error);
-// });
 
 
-
-//
-// function addAMovie(){
-//   var newMovie = {
-//     id: movies.length + 1,
-//     title: document.getElementById('movie-title').value,
-//     rating: document.getElementById('movie-rating').value
-//   };
-//   console.log(movies);
-
-
-
-
-// const movieTitle = document.querySelector('#movie-title');
-// const movieRating = document.querySelector('#movie-rating');
-// const submitButton = document.querySelector('#submitButton');
-
-//render html of movies not coffee
-// function keyCoffee() {
-//   var html = '';
-//   for(var i = 0; i < coffees.length; i++) {
-//     if(coffees[i].name.toLowerCase().includes(document.getElementById('coffee-name').value.toLowerCase()) && (selectedRoast === coffees[i].roast)) {
-//       console.log(coffees.name);
-//       html += renderCoffee(coffees[i]);
-//     }
-//     tbody.innerHTML = html;
-//   }
-//   return html;
-// }
-
-//tbody.innerHTML = renderCoffees(coffees);
 
 
