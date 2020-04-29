@@ -11,35 +11,45 @@ sayHello('World');
 /**
  * require style imports
  */
+
+
 // const {getMovies} = require('./api.js');
-import {getMovies, postMovies, deleteMovies} from './api.js';
+import {getMovies, postMovies, editMovies, deleteMovies} from './api.js';
 
+refreshMovies();
+function refreshMovies() {
 
-getMovies().then((movies) => {
+    getMovies().then((movies) => {
 
-  document.getElementById('load-screen').style.display = "none";
+        document.getElementById('load-screen').style.display = "none";
 
-  console.log('Here are all the movies:');
-  let output = '<h2>Movie Posts</h2>';
-  movies.forEach(({title, rating, id}) => {
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
-    output += `<ul>
+        console.log('Here are all the movies:');
+        let output = '<h2>Movie Posts</h2>';
+        movies.forEach(({title, rating, id}) => {
+            console.log(`id#${id} - ${title} - rating: ${rating}`);
+            output += `<ul>
                <li>id: ${id}</li>
                <li>title: ${title}</li>
                <li>rating: ${rating}</li>
                </ul>
                <button data-movieid="${id}" class="delete">Delete Movie</button>
                 `;
-  });
-  document.getElementById('output').innerHTML = output;
-}).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.');
-  console.log(error);
-});
+        });
+        document.getElementById('output').innerHTML = output;
+    }).catch((error) => {
+        alert('Oh no! Something went wrong.\nCheck the console for details.');
+        console.log(error);
+    });
+
+}
+
+
 
 // var submitButton = document.getElementById('submit');
 // document.getElementById('submit').addEventListener('click', console.log('hellooooo'));
 
+
+//POST MOVIES USING VANILLA JS
 document.getElementById('submit').addEventListener('click', function () {
   postMovies({
     title: document.getElementById('movie-title').value,
@@ -50,7 +60,37 @@ document.getElementById('submit').addEventListener('click', function () {
 });
 
 
+// <script type="text/javascript">
+//     function autoFill() {
+//         document.getElementById('input1').value = "My Text Input";
+//         document.getElementById('input2').value = "Dropdown2";
+//
+//         var radioElements = document.getElementsByName("input3");
+//
+//         for (var i=0; i<radioElements.length; i++) {
+//             if (radioElements[i].getAttribute('value') == 'Radio3') {
+//                 radioElements[i].checked = true;
+//             }
+//         }
+//     }
+//     </script>
 
+
+//EDIT MOVIES USING VANILLA JS
+document.getElementById('submit-edit').addEventListener('click', function () {
+    let data = {
+        title: document.getElementById('edit-movie-title').value,
+        rating: document.getElementById('edit-movie-rating').value
+    };
+    let movieId = document.getElementById('edit-movie-id').value;
+    editMovies(data, movieId).then((movies) => {
+        console.log(movies);
+    })
+});
+
+
+
+//DELETE MOVIES USING JQUERY
 $(document).on("click", ".delete", function () {
   console.log('delete button was clicked');
   let movieID = $(this).data("movieid");
@@ -65,27 +105,15 @@ $(document).on("click", ".delete", function () {
           .then(response => response.json())
 
           ///whole getMovies function sequence from above
-          .then(getMovies().then((movies) => {
-            document.getElementById('load-screen').style.display = "none";
-            console.log('Here are all the movies:');
-            let output = '<h2>Movie Posts</h2>';
-            movies.forEach(({title, rating, id}) => {
-              console.log(`id#${id} - ${title} - rating: ${rating}`);
-              output += `<ul>
-               <li>id: ${id}</li>
-               <li>title: ${title}</li>
-               <li>rating: ${rating}</li>
-               </ul>
-               <button data-movieid="${id}" class="delete">Delete Movie</button>
-                `;
-            });
-            document.getElementById('output').innerHTML = output;
-          }).catch((error) => {
-            alert('Oh no! Something went wrong.\nCheck the console for details.');
-            console.log(error);
-          }));
+          .then(refreshMovies)
         //this concludes the getMovies function sequence from above
     });
+
+
+
+
+
+
 
 
 

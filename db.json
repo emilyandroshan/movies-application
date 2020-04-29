@@ -2,13 +2,18 @@
   "movies": [
     {
       "title": "Harry Potter",
-      "rating": "3",
+      "rating": "2",
       "id": 1
     },
     {
-      "title": "Star Wars ",
-      "rating": "4",
+      "title": "1917",
+      "rating": "3",
       "id": 2
+    },
+    {
+      "title": "Frozen",
+      "rating": "5",
+      "id": 3
     }
   ]
 }

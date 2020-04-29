@@ -16,29 +16,37 @@ module.exports = {
         .then(response => response.json())
   },
 
-  // deleteMovies: (movie, id) => {
-  //   const options = {
-  //     method: 'DELETE',
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   };
-  //   //removed $ sign in front of id
-  //   fetch(`api/movies/{id}`, options)
-  //       .then(response => response.json())
-  // }
+
+  editMovies: (movie, id) => {
+    const options = {
+      method: 'PUT',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(movie)
+    };
+    fetch(`api/movies/${id}`, options)
+        .then(response => response.json())
+  },
+
 
 };
 
 
+
+
+//DELETE AJAX REQUEST
+// deleteMovies: (movie, id) => {
 //   const options = {
 //     method: 'DELETE',
-//     headers: {'Content-Type': 'application/json'}
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
 //   };
-//   fetch(url, options)
-//       .then(updatemovies)
-// });
-
+//   //removed $ sign in front of id
+//   fetch(`api/movies/${id}`, options)
+//       .then(response => response.json())
+// }
 
 
 
