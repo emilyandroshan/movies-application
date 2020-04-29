@@ -33,24 +33,40 @@ getMovies().then((movies) => {
 
 
 
-//work in progress of POST
-postMovies({
-  title: "Star Wars",
-  rating: 1
-}).then((movies) => {
-  console.log(movies);
-//   console.log('Here is the new movie the user added:');
-//   movies.forEach(({title, rating, id}) => {
-//     console.log(`id#${id} - ${title} - rating: ${rating}`);
-//   });
-// }).catch((error) => {
-//   alert('Oh no! Something went wrong.\nCheck the console for details.')
-//   console.log(error);
+
+var submitButton = document.getElementById('submit');
+
+// document.getElementById('submit').addEventListener('click', console.log('hellooooo'));
+
+
+document.getElementById('submit').addEventListener('click', function () {
+  postMovies({
+    title: document.getElementById('movie-title').value,
+    rating: document.getElementById('movie-rating').value
+  }).then((movies) => {
+    console.log(movies);
+  })
 });
 
 
-// var submitButton = document.querySelector('#submit');
-// submitButton.addEventListener('click', addAMovie);
+//work in progress of POST
+
+// postMovies({
+//   title: document.getElementById('movie-title').value,
+//     rating: document.getElementById('movie-rating').value
+// }).then((movies) => {
+//   console.log(movies);
+// //   console.log('Here is the new movie the user added:');
+// //   movies.forEach(({title, rating, id}) => {
+// //     console.log(`id#${id} - ${title} - rating: ${rating}`);
+// //   });
+// // }).catch((error) => {
+// //   alert('Oh no! Something went wrong.\nCheck the console for details.')
+// //   console.log(error);
+// });
+
+
+
 //
 // function addAMovie(){
 //   var newMovie = {
