@@ -1,11 +1,6 @@
 {
   "movies": [
     {
-      "title": "Harry Potter",
-      "rating": "2",
-      "id": 1
-    },
-    {
       "title": "1917",
       "rating": "3",
       "id": 2
