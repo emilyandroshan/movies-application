@@ -1,10 +1,51 @@
-html, body {
-    height: 100%;
+/*html, body {*/
+/*    height: 100%;*/
+/*}*/
+
+/*.container {*/
+/*    position: relative;*/
+/*    !*top: 50%;*!*/
+/*    !*transform: translateY(-100%);*!*/
+/*    text-align: center;*/
+/*}*/
+
+div#load-screen {
+    background: #000;
+    opacity: 1;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    width: 100%;
+    height: 1600px;
 }
 
-.container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-100%);
-    text-align: center;
+div#load-screen>div#loading {
+    color: #FFF;
+    width: 120px;
+    height: 50px;
+    margin: 300px auto;
 }
+
+h1 {
+    font-family: 'Rock Salt', cursive;
+    margin-top: 10vh;
+    margin-bottom: 50px;
+    /*font-size: 20em;*/
+}
+
+main {
+    background: url("nightSky.jpg");
+    /*opacity: 0.2;*/
+    background-size: 100% 100%;
+    width:100%;
+    height: 100vh;
+    font-family: 'Kalam', cursive;
+    list-style: none;
+    color: white;
+    /*font-size: 1.5em;*/
+}
+
+.container-4 {
+    z-index: 1;
+}
+
