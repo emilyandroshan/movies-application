@@ -27,7 +27,7 @@ function refreshMovies() {
         let output = '';
         movies.forEach(({title, rating, id}) => {
             console.log(`id#${id} - ${title} - rating: ${rating}`);
-            output += `<div class="d-flex m-5">
+            output += `<div class="d-flex mt-4 mb-3 ml-4 mr-4">
                 <ul class="list-unstyled">
                <li>id: ${id}</li>
                <li>title: ${title}</li>

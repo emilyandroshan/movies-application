@@ -12,98 +12,77 @@
 
 </head>
 <body>
-<main>
-    <!--LOADING SCREEN-->
-    <div id="load-screen">
-        <div id="loading">loading</div>
-    </div>
+    <main>
+        <!--LOADING SCREEN-->
+        <div id="load-screen">
+            <div id="loading">loading</div>
+        </div>
 
-<!--    &lt;!&ndash;HEADER&ndash;&gt;-->
-<!--    <div class="container text-center">-->
-<!--        <h1>Movie Info</h1>-->
-<!--        <br>-->
-<!--&lt;!&ndash;        <p>Check out the current movie listing</p>&ndash;&gt;-->
-<!--    </div>-->
-    <!--HEADER-->
-    <section class="header">
-        <div class="container-fluid">
-            <div class="d-flex justify-content-center">
-                <div class="d-flex flex-column">
-                    <h1 class="display-2 site-title">Movie Info</h1>
+        <!--HEADER-->
+        <section class="header">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <h1 class="display-4 site-title">Movie Info</h1>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!--POST MOVIES FORM-->
+        <form>
+            <div class="container-two">
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-sm-2">
+                    <!--            <label for="movie-title">Name of movie</label>-->
+                        <input type="text" id="movie-title" class="form-control" placeholder="add movie title">
+                    </div>
+                    <!--            <label for="movie-rating">Rating of Movie</label>-->
+                    <div class="form-group col-sm-2">
+                        <input type="text" id="movie-rating" class="form-control" placeholder="add movie rating">
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary btn-md ml-1 mb-3">Add</button>
+                </div>
+            </div>
+        </form>
 
-
-
-
-
-
-
-    <!--POST MOVIES FORM-->
-    <form>
-        <div class="container-two">
-            <div class="form-row justify-content-center">
-                <div class="form-group col-sm-0">
+        <!--EDIT MOVIES FORM-->
+        <form>
+            <div class="container-three">
+                <div class="form-row justify-content-center mb-3 ">
+                    <div class="form-group col-sm-2">
+                <!--            <label for="edit-movie-id">Movie id</label>-->
+                        <input type="text" id="edit-movie-id" class="form-control" placeholder="edit movie id">
+                    </div>
+                    <div class="form-group col-sm-2">
                 <!--            <label for="movie-title">Name of movie</label>-->
-                    <input type="text" id="movie-title" class="form-control-lg" placeholder="add movie title">
-                </div>
+                        <input type="text" id="edit-movie-title" class="form-control" placeholder="edit movie title">
+                    </div>
+                    <div class="form-group col-sm-2">
                 <!--            <label for="movie-rating">Rating of Movie</label>-->
-                <div class="form-group col-sm-0">
-                    <input type="text" id="movie-rating" class="form-control-lg" placeholder="add movie rating">
+                        <input type="text" id="edit-movie-rating" class="form-control" placeholder="edit movie rating">
+                    </div>
+                    <button type="submit" id="submit-edit" class="btn btn-primary btn-md ml-1 mb-3">Edit</button>
                 </div>
-                <button type="submit" id="submit" class="btn btn-primary btn-lg ml-1 mb-3">Add</button>
             </div>
+        </form>
+
+            <!--GENERATED HTML OUTPUT-->
+        <div class="container-four ml-5">
+            <div id="output" class="d-flex flex-wrap text-center mr-5"></div>
         </div>
-    </form>
+    </main>
 
-
-
-    <!--EDIT MOVIES FORM-->
-    <form>
-        <div class="container-three">
-            <div class="form-row justify-content-center ">
-                <div class="form-group col-md-0">
-            <!--            <label for="edit-movie-id">Movie id</label>-->
-                    <input type="text" id="edit-movie-id" class="form-control-lg" placeholder="edit movie id">
-                </div>
-                <div class="form-group col-md-0">
-            <!--            <label for="movie-title">Name of movie</label>-->
-                    <input type="text" id="edit-movie-title" class="form-control-lg" placeholder="edit movie title">
-                </div>
-                <div class="form-group col-md-0">
-            <!--            <label for="movie-rating">Rating of Movie</label>-->
-                    <input type="text" id="edit-movie-rating" class="form-control-lg" placeholder="edit movie rating">
-                </div>
-                <button type="submit" id="submit-edit" class="btn btn-primary btn-lg ml-1 mb-3">Edit</button>
-            </div>
-        </div>
-    </form>
-
-
-
-        <!--GENERATED HTML OUTPUT-->
-    <div class="container-four">
-        <div id="output" class="d-flex flex-wrap text-center mr-5"></div>
-    </div>
-
-
-
-</main>
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-<script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 
 
 </body>

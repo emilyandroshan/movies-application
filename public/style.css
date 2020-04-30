@@ -28,13 +28,13 @@ div#load-screen>div#loading {
 
 h1 {
     font-family: 'Rock Salt', cursive;
-    margin-top: 7vh;
-    margin-bottom: 60px;
+    margin-top: 10vh;
+    margin-bottom: 50px;
     /*font-size: 20em;*/
 }
 
 main {
-    background: url("night.jpg");
+    background: url("nightSky.jpg");
     /*opacity: 0.2;*/
     background-size: 100% 100%;
     width:100%;
@@ -42,9 +42,10 @@ main {
     font-family: 'Kalam', cursive;
     list-style: none;
     color: white;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
 }
 
 .container-4 {
     z-index: 1;
 }
+
