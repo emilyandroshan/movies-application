@@ -29,7 +29,7 @@
         <div class="container-fluid">
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column">
-                    <h1 class="display-4 site-title">Movie Info</h1>
+                    <h1 class="display-2 site-title">Movie Info</h1>
                 </div>
             </div>
         </div>
@@ -46,39 +46,38 @@
     <form>
         <div class="container-two">
             <div class="form-row justify-content-center">
-                <div class="form-group col-sm-2">
+                <div class="form-group col-sm-0">
                 <!--            <label for="movie-title">Name of movie</label>-->
-                    <input type="text" id="movie-title" class="form-control" placeholder="add movie title">
+                    <input type="text" id="movie-title" class="form-control-lg" placeholder="add movie title">
                 </div>
                 <!--            <label for="movie-rating">Rating of Movie</label>-->
-                <div class="form-group col-sm-2">
-                    <input type="text" id="movie-rating" class="form-control" placeholder="add movie rating">
+                <div class="form-group col-sm-0">
+                    <input type="text" id="movie-rating" class="form-control-lg" placeholder="add movie rating">
                 </div>
-                <button type="submit" id="submit" class="btn btn-primary mb-3">Add</button>
+                <button type="submit" id="submit" class="btn btn-primary btn-lg ml-1 mb-3">Add</button>
             </div>
         </div>
     </form>
 
-    <br>
 
 
     <!--EDIT MOVIES FORM-->
     <form>
         <div class="container-three">
             <div class="form-row justify-content-center ">
-                <div class="form-group col-sm-2">
+                <div class="form-group col-md-0">
             <!--            <label for="edit-movie-id">Movie id</label>-->
-                    <input type="text" id="edit-movie-id" class="form-control" placeholder="edit movie id">
+                    <input type="text" id="edit-movie-id" class="form-control-lg" placeholder="edit movie id">
                 </div>
-                <div class="form-group col-sm-2">
+                <div class="form-group col-md-0">
             <!--            <label for="movie-title">Name of movie</label>-->
-                    <input type="text" id="edit-movie-title" class="form-control" placeholder="edit movie title">
+                    <input type="text" id="edit-movie-title" class="form-control-lg" placeholder="edit movie title">
                 </div>
-                <div class="form-group col-sm-2">
+                <div class="form-group col-md-0">
             <!--            <label for="movie-rating">Rating of Movie</label>-->
-                    <input type="text" id="edit-movie-rating" class="form-control" placeholder="edit movie rating">
+                    <input type="text" id="edit-movie-rating" class="form-control-lg" placeholder="edit movie rating">
                 </div>
-                <button type="submit" id="submit-edit" class="btn btn-primary mb-3">Edit</button>
+                <button type="submit" id="submit-edit" class="btn btn-primary btn-lg ml-1 mb-3">Edit</button>
             </div>
         </div>
     </form>
@@ -86,8 +85,8 @@
 
 
         <!--GENERATED HTML OUTPUT-->
-    <div class="container-four text-center">
-        <div id="output"></div>
+    <div class="container-four">
+        <div id="output" class="d-flex flex-wrap text-center mr-5"></div>
     </div>
 
 

@@ -27,12 +27,14 @@ function refreshMovies() {
         let output = '';
         movies.forEach(({title, rating, id}) => {
             console.log(`id#${id} - ${title} - rating: ${rating}`);
-            output += `<ul class="list-unstyled">
+            output += `<div class="d-flex m-5">
+                <ul class="list-unstyled">
                <li>id: ${id}</li>
                <li>title: ${title}</li>
                <li>rating: ${rating}</li>
+               <li><button data-movieid="${id}" class="delete btn btn-primary mt-2">Delete</button></li>
                </ul>
-               <button data-movieid="${id}" class="delete btn btn-primary mb-2">Delete</button>
+               </div>
                 `;
         });
         document.getElementById('output').innerHTML = output;
