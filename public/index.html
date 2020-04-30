@@ -1,58 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>My Application</title>
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"/>
 
 </head>
 <body>
+<main>
+    <!--LOADING SCREEN-->
+    <div id="load-screen">
+        <div id="loading">loading</div>
+    </div>
 
-<!--LOADING SCREEN-->
-<div id="load-screen">
-    <div id="loading">loading</div>
-</div>
-
-<!--HEADER-->
-<div class="container">
-    <h1>Howdy! Welcome to Movie Info App</h1>
-    <p>Check out the current movie listing</p>
-
-<!--GENERATED HTML OUTPUT-->
-    <div id="output"></div>
-</div>
-
-
-<!--POST MOVIES FORM-->
-<div class="container-two">
-<form>
-    <label for="movie-title">Name of movie</label>
-    <input type="text" id="movie-title" placeholder="Movie Title">
-    <label for="movie-rating">Rating of Movie</label>
-    <input type="text" id="movie-rating" placeholder="Movie Rating">
-    <button type="submit" id="submit">Add Movie</button>
-</form>
-</div>
+<!--    &lt;!&ndash;HEADER&ndash;&gt;-->
+<!--    <div class="container text-center">-->
+<!--        <h1>Movie Info</h1>-->
+<!--        <br>-->
+<!--&lt;!&ndash;        <p>Check out the current movie listing</p>&ndash;&gt;-->
+<!--    </div>-->
+    <!--HEADER-->
+    <section class="header">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <h1 class="display-4 site-title">Movie Info</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!--EDIT MOVIES FORM-->
-<div class="container-three">
+
+
+
+
+
+
+    <!--POST MOVIES FORM-->
     <form>
-        <label for="edit-movie-id">Movie id</label>
-        <input type="text" id="edit-movie-id" placeholder="Movie ID">
-        <label for="movie-title">Name of movie</label>
-        <input type="text" id="edit-movie-title" placeholder="Movie Title">
-        <label for="movie-rating">Rating of Movie</label>
-        <input type="text" id="edit-movie-rating" placeholder="Movie Rating">
-        <button type="submit" id="submit-edit">Edit Movie</button>
+        <div class="container-two">
+            <div class="form-row justify-content-center">
+                <div class="form-group col-sm-2">
+                <!--            <label for="movie-title">Name of movie</label>-->
+                    <input type="text" id="movie-title" class="form-control" placeholder="add movie title">
+                </div>
+                <!--            <label for="movie-rating">Rating of Movie</label>-->
+                <div class="form-group col-sm-2">
+                    <input type="text" id="movie-rating" class="form-control" placeholder="add movie rating">
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary mb-3">Add</button>
+            </div>
+        </div>
     </form>
-</div>
+
+    <br>
 
 
-<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <!--EDIT MOVIES FORM-->
+    <form>
+        <div class="container-three">
+            <div class="form-row justify-content-center ">
+                <div class="form-group col-sm-2">
+            <!--            <label for="edit-movie-id">Movie id</label>-->
+                    <input type="text" id="edit-movie-id" class="form-control" placeholder="edit movie id">
+                </div>
+                <div class="form-group col-sm-2">
+            <!--            <label for="movie-title">Name of movie</label>-->
+                    <input type="text" id="edit-movie-title" class="form-control" placeholder="edit movie title">
+                </div>
+                <div class="form-group col-sm-2">
+            <!--            <label for="movie-rating">Rating of Movie</label>-->
+                    <input type="text" id="edit-movie-rating" class="form-control" placeholder="edit movie rating">
+                </div>
+                <button type="submit" id="submit-edit" class="btn btn-primary mb-3">Edit</button>
+            </div>
+        </div>
+    </form>
+
+
+
+        <!--GENERATED HTML OUTPUT-->
+    <div class="container-four text-center">
+        <div id="output"></div>
+    </div>
+
+
+
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="./main.js"></script>
 
 

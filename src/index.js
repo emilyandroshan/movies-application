@@ -24,15 +24,15 @@ function refreshMovies() {
         document.getElementById('load-screen').style.display = "none";
 
         console.log('Here are all the movies:');
-        let output = '<h2>Movie Posts</h2>';
+        let output = '';
         movies.forEach(({title, rating, id}) => {
             console.log(`id#${id} - ${title} - rating: ${rating}`);
-            output += `<ul>
+            output += `<ul class="list-unstyled">
                <li>id: ${id}</li>
                <li>title: ${title}</li>
                <li>rating: ${rating}</li>
                </ul>
-               <button data-movieid="${id}" class="delete">Delete Movie</button>
+               <button data-movieid="${id}" class="delete btn btn-primary mb-2">Delete</button>
                 `;
         });
         document.getElementById('output').innerHTML = output;
