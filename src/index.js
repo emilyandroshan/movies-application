@@ -24,16 +24,15 @@ function refreshMovies() {
         document.getElementById('load-screen').style.display = "none";
 
         console.log('Here are all the movies:');
-        let output = '<h2>Movie Posts</h2>';
+        let output = '';
         movies.forEach(({title, rating, id}) => {
             console.log(`id#${id} - ${title} - rating: ${rating}`);
-            output += `<ul>
+            output += `<ul class="list-unstyled">
                <li>id: ${id}</li>
                <li>title: ${title}</li>
                <li>rating: ${rating}</li>
                </ul>
-               <button data-movieid="${id}" class="delete">Delete Movie</button>
-                   <button data-editid="${id}" class="edit">Edit Movie</button>
+               <button data-movieid="${id}" class="delete btn btn-primary mb-2">Delete</button>
                 `;
         });
         document.getElementById('output').innerHTML = output;
@@ -112,37 +111,6 @@ $(document).on("click", ".delete", function () {
 
 
 
-//Roshan,
-//THIS IS WHERE WE ENDED IT ON WEDNESDAY
-//just created the edit button and it is functional, but now we have to create a form element
-//and input element ???
-
-$(document).on("click", ".edit", function () {
-    console.log("edit button was clicked");
-    document.createElement("FORM");
-//  .....
-    });
-
-//this page might be helpful
-//https://stackoverflow.com/questions/3991204/how-to-create-a-form-dynamically-using-javascript
-//my_form=document.createElement('FORM');
-// my_form.name='myForm';
-// my_form.method='POST';
-// my_form.action='http://www.another_page.com/index.htm';
-//
-// my_tb=document.createElement('INPUT');
-// my_tb.type='TEXT';
-// my_tb.name='myInput';
-// my_tb.value='Values of my Input';
-// my_form.appendChild(my_tb);
-//
-// my_tb=document.createElement('INPUT');
-// my_tb.type='HIDDEN';
-// my_tb.name='hidden1';
-// my_tb.value='Values of my hidden1';
-// my_form.appendChild(my_tb);
-// document.body.appendChild(my_form);
-// my_form.submit();
 
 
 

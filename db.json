@@ -1,11 +1,6 @@
 {
   "movies": [
     {
-      "title": "1917",
-      "rating": "3",
-      "id": 2
-    },
-    {
       "title": "Frozen",
       "rating": "5",
       "id": 3
